@@ -19,7 +19,7 @@ import os
 
 
 def save_uploadedfile(uploadedfile):
-    with open(os.path.join("C:/Users/SHUBHAM AGNIHOTRI/Desktop/MCA_GUI/model", uploadedfile.name), "wb") as f:
+    with open(os.path.join("model", uploadedfile.name), "wb") as f:
         f.write(uploadedfile.getbuffer())
     return st.success("Saved File:{} to model".format(uploadedfile.name))
 
