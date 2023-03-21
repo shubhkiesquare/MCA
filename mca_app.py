@@ -42,8 +42,8 @@ def main():
         if dataset_file is not None:
             file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
             st.text(file_details)
-		else:
-			st.text("nofile")
+	else:
+	    st.text("nofile")
 
             #with open(os.path.join("/app/mca",dataset_file.name), "wb") as f:
                 #f.write(dataset_file.getbuffer())
