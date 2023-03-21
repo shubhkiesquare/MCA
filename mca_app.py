@@ -19,7 +19,7 @@ import os
 
 
 def save_uploadedfile(uploadedfile):
-    with open(os.path.join("shubhkiesquare/mca/main/model", uploadedfile.name), "wb") as f:
+    with open(os.path.join("shubhkiesquare/mca/model", uploadedfile.name), "wb") as f:
         f.write(uploadedfile.getbuffer())
     return st.success("Saved File:{} to model".format(uploadedfile.name))
 
