@@ -4,3 +4,4 @@ joblib
 numpy
 scikit_learn
 numpy
+statsmodels
