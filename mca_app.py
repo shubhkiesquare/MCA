@@ -42,7 +42,7 @@ def main():
         if dataset_file is not None:
             file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
             st.write(file_details)
-            with open(os.path.join(dataset_file.name), "wb") as f:
+            with open(os.path.join("/app/mca",dataset_file.name), "wb") as f:
                 f.write(dataset_file.getbuffer())
 
 
