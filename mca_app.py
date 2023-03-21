@@ -41,20 +41,21 @@ def main():
     st.text("Upload Latest Data Set")
     if st.button("Upload Dataset"):
 		
-        dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
-	
-		if dataset_file is not None:
-	
-			file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
-			st.write(file_details)
-			with open(os.path.join("/app/mca/dataset", dataset_file.name), "wb") as f:
-				
-				f.write(dataset_file.getbuffer())
+	dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
+
+	if dataset_file is not None:
+		
+
+		file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
+		st.write(file_details)
+		with open(os.path.join("/app/mca/dataset", dataset_file.name), "wb") as f:
+			f.write(dataset_file.getbuffer())
 
 
 
 
     if st.button("Upload Model"):
+	
         model_file = st.file_uploader("Upload Model File", type=['py'])
         if model_file is not None:
             file_details = {"FileName": model_file.name, "FileType": model_file.type}
