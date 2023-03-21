@@ -39,6 +39,7 @@ def main():
     st.text("Upload Latest Data Set")
     if st.button("Upload Dataset"):
         dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
+	st.write(os.getcwd())
        
 	#file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
 	#st.write(file_details)
