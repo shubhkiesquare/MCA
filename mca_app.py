@@ -42,7 +42,7 @@ def main():
         if dataset_file is not None:
             file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
             st.write(file_details)
-            with open(os.path.join("C:/Users/SHUBHAM AGNIHOTRI/Desktop/MCA_GUI/dataset", dataset_file.name), "wb") as f:
+            with open(os.path.join("/dataset", dataset_file.name), "wb") as f:
                 f.write(dataset_file.getbuffer())
 
 
@@ -69,7 +69,7 @@ def main():
     if st.button("Check Cofficient File"):
 
         filelist = []
-        for root, dirs, files in os.walk("C:/Users/SHUBHAM AGNIHOTRI/Desktop/MCA_GUI/coeff"):
+        for root, dirs, files in os.walk("coeff"):
             for file in files:
                 filename = os.path.join(root, file)
                 filelist.append(filename)
