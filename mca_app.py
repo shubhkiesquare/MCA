@@ -43,13 +43,11 @@ def main():
 		
 	dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
 
-	if dataset_file is not None:
-		
-
-		file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
-		st.write(file_details)
-		with open(os.path.join("/app/mca/dataset", dataset_file.name), "wb") as f:
-			f.write(dataset_file.getbuffer())
+		if dataset_file is not None:
+			file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
+			st.write(file_details)
+			with open(os.path.join("/app/mca/dataset", dataset_file.name), "wb") as f:
+				f.write(dataset_file.getbuffer())
 
 
 
