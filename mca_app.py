@@ -40,8 +40,8 @@ def main():
     if st.button("Upload Dataset"):
         dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
        
-	file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
-	st.write(file_details)
+	#file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
+	#st.write(file_details)
 #             with open(os.path.join("dataset", dataset_file.name), "wb") as f:
 #                 f.write(dataset_file.getbuffer())
 
