@@ -69,7 +69,7 @@ def main():
     if st.button("Check Cofficient File"):
 
         filelist = []
-        for root, dirs, files in os.walk("dataset"):
+        for root, dirs, files in os.walk("coeff"):
             for file in files:
                 filename = os.path.join(root, file)
                 filelist.append(filename)
