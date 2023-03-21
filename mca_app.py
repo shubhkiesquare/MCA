@@ -24,6 +24,8 @@ def save_uploadedfile(uploadedfile):
     return st.success("Saved File:{} to model".format(uploadedfile.name))
 
 def run_model():
+	
+	
     df=load_data(r"C:\Users\SHUBHAM AGNIHOTRI\Desktop\MCA_GUI\Masala_Oats_Dataset.xlsx", sheet_name = 'Dataset')
     #df = pd.read_excel(r"C:\Users\SHUBHAM AGNIHOTRI\Desktop\MCA_GUI\Masala_Oats_Dataset.xlsx", sheet_name = 'Dataset')
     df1=create_lag(df)
@@ -38,14 +40,16 @@ def main():
 
     st.text("Upload Latest Data Set")
     if st.button("Upload Dataset"):
+		
         dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
 	
-       if dataset_file is not None:
+		if dataset_file is not None:
 	
-	file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
-	st.write(file_details)
-	with open(os.path.join("/app/mca/dataset", dataset_file.name), "wb") as f:
-		f.write(dataset_file.getbuffer())
+			file_details = {"FileName": dataset_file.name, "FileType": dataset_file.type}
+			st.write(file_details)
+			with open(os.path.join("/app/mca/dataset", dataset_file.name), "wb") as f:
+				
+				f.write(dataset_file.getbuffer())
 
 
 
