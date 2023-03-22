@@ -40,7 +40,7 @@ def main():
     if st.button("Upload Dataset"):
         dataset_file = st.file_uploader("Upload Dataset File", type=['xlsx'])
         st.write(dataset_file)
-        with open(os.path.join("C:/Users/SHUBHAM AGNIHOTRI/Desktop/MCA_GUI/dataset", dataset_file.name), "wb") as f:
+        with open(os.path.join("model", dataset_file.name), "wb") as f:
             f.write(dataset_file.getbuffer())
 
 
