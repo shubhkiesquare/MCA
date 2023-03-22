@@ -57,7 +57,7 @@ def main():
                 filename = os.path.join(root, file)
                 filelist.append(filename)
         choice = st.selectbox('SELECT FILE', filelist)
-        df_coeff_gui=pd.read_csv(choice)
+        df_coeff_gui=pd.read_csv(choice,encoding="utf-8")
         st.dataframe(df_coeff_gui)
 
 
