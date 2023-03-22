@@ -67,7 +67,7 @@ def main():
     if st.button("Check Cofficient File"):
 
         filelist = []
-        for root, dirs, files in os.walk("C:/Users/SHUBHAM AGNIHOTRI/Desktop/MCA_GUI/coeff"):
+        for root, dirs, files in os.walk("coeff"):
             for file in files:
                 filename = os.path.join(root, file)
                 filelist.append(filename)
