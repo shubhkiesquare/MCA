@@ -45,7 +45,7 @@ def main():
 
 
 
-    @st.cache
+  
     if st.button("Upload Model"):
         model_file = st.file_uploader("Upload Model File", type=['py'])
         if model_file is not None:
