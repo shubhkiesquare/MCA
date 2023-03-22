@@ -17,9 +17,9 @@ import os
 
 
 
-
+@st.cache
 def save_uploadedfile(uploadedfile):
-    with open(os.path.join("C:/Users/SHUBHAM AGNIHOTRI/Desktop/MCA_GUI/model", uploadedfile.name), "wb") as f:
+    with open(os.path.join("model", uploadedfile.name), "wb") as f:
         f.write(uploadedfile.getbuffer())
     return st.success("Saved File:{} to model".format(uploadedfile.name))
 
@@ -45,7 +45,7 @@ def main():
 
 
 
-
+    @st.cache
     if st.button("Upload Model"):
         model_file = st.file_uploader("Upload Model File", type=['py'])
         if model_file is not None:
