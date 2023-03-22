@@ -46,22 +46,7 @@ def main():
 
 
 
-    if st.button("Upload Model"):
-        model_file = st.file_uploader("Upload Model File", type=['py'])
-        if model_file is not None:
-            file_details = {"FileName": model_file.name, "FileType": model_file.type}
-            st.write(file_details)
-            save_uploadedfile(model_file)
-
-
-
-    if st.button("Run Model"):
-        # df_output=run_file()
-        # st.success("Model Ran Succesfully")
-        # st.write("Model Coefficient Output")
-        # st.dataframe(df_output)
-        subprocess.run(["python", "model/model_1.py"])
-        st.success("Model Ran Succesfully")
+    
 
 
     if st.button("Check Cofficient File"):
