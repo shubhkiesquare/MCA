@@ -1,8 +1,0 @@
-pandas
-streamlit
-joblib
-numpy
-scikit_learn
-numpy
-statsmodels
-seaborn
