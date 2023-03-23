@@ -34,7 +34,7 @@ def main():
 			if data_file is not None:
 				file_details = {"Filename":data_file.name,"FileType":data_file.type,"FileSize":data_file.size}
 				st.write(file_details)
-				with open(os.path.join("dataset", data_file.name), "wb") as f:
+				with (tempfile.TemporaryFile()) as f:
 					f.write(data_file.getbuffer())
 				st.success("dataset uploaded")
 				df = pd.read_csv(data_file)
