@@ -37,6 +37,7 @@ def main():
 				with (tempfile.TemporaryFile()) as f:
 					f.write(data_file.getbuffer())
 				st.success("dataset uploaded")
+				print(tempfile.gettempdir())
 				df = pd.read_csv(data_file)
 				st.dataframe(df)
 				
